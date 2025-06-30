@@ -289,6 +289,9 @@ function Room() {
         {(displayMakeCallButton || acceptCallDisplay) && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
             <div className="bg-gray-800 p-6 rounded-lg shadow-xl text-center">
+              {
+                displayMakeCallButton ? <h3 className="text-xl">Make a call to Your Partner</h3> : <h3 className="text-xl">Your Partner Wants to connects with you</h3>
+              }
               {displayMakeCallButton && (
                 <button
                   onClick={handleMakeCall}
